@@ -1,0 +1,77 @@
+body {
+    background-color: #202028;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive, sans-serif; /* 픽셀 폰트 느낌 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* 스크롤 방지 */
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* 10x20 그리드 (각 셀 20px 가정, 모바일 크기에 따라 조정 가능) */
+.grid {
+    width: 200px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #000;
+    border: 2px solid #333;
+    margin-bottom: 20px;
+}
+
+.grid div {
+    width: 20px;
+    height: 20px;
+}
+
+/* 블록 스타일 */
+.tetromino { background-color: #00f0f0; border: 1px solid rgba(0,0,0,0.1); box-sizing: border-box; }
+.taken { background-color: #333; border: 1px solid #222; } /* 바닥에 쌓인 블록 */
+
+/* 모바일 컨트롤러 */
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+button {
+    background: #444;
+    border: none;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    touch-action: manipulation; /* 더블탭 줌 방지 */
+    cursor: pointer;
+}
+
+button:active { background: #666; }
+
+.arrow-keys {
+    display: flex;
+    gap: 20px;
+}
+
+#rotate {
+    width: 80px;
+    background-color: #d63031;
+}
+
+#start-btn {
+    background-color: #0984e3;
+    width: 80%;
+}
